@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-require('./app/models/product');
+require('./app/models');
 const config = require('./config');
 
 
@@ -11,20 +11,15 @@ config.routes(app);
 
 const { appPort, mongoUri } = config.app;
 
-
+//подключение к mongoDB и запуск сервера
 mongoose.connect(
     mongoUri,
     {
+        useFindAndModify: false,
         useNewUrlParser: true,
-        useUnifiedTopology: true
+        useUnifiedTopology: true,
     }
 ).then(() => app.listen(
     appPort,
-    () => console.log(`Listening on port ${config.appPort}...`))
+    () => console.log(`Listening on port ${appPort}...`))
 ).catch(error => console.error(`Error connecting to mongo: ${mongoUri}`, error));
-
-
-
-
-
-
