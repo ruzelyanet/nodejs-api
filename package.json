@@ -1,7 +1,7 @@
 {
   "name": "nodeapi",
   "version": "1.0.0",
-  "description": "",
+  "description": "my first node api",
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./src/index.js",
