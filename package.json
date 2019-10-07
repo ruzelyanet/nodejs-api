@@ -6,7 +6,6 @@
   "scripts": {
     "start": "nodemon index.js",
     "lint-me": "eslint .",
-    "build": "npm run build-js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
