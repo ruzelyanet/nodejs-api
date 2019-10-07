@@ -9,6 +9,12 @@ const authMiddleware = require('../app/middleware/auth');
 //--Экпорт роутов Api
 module.exports = (app) => {
 
+    app.get('/', (req, res) => {
+
+        res.send("index");
+
+    });
+
     /*
         Поток прохождения запроса:
         ://запрос / проверка промежуточного слоя на авторизацию / выполнение запроса
