@@ -11,7 +11,7 @@ const authMiddleware = require('../app/middleware/auth');
 module.exports = (app) => {
 
     app.get('/', (req, res) => {
-        res.sendFile('./index.html');
+        res.send('./index.html');
     });
 
     /*
