@@ -9,7 +9,7 @@ const authMiddleware = require('../app/middleware/auth');
 //--Экпорт роутов Api
 module.exports = (app) => {
 
-    app.get('/api/', (req, res) => {
+    app.get('/common/', (req, res) => {
 
         res.send('common index node js api');
 
