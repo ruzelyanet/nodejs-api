@@ -6,12 +6,11 @@ const auth = require('../app/controllers/auth');
 //--Подтягиваем модуль промежуточного слоя для авторизауии
 const authMiddleware = require('../app/middleware/auth');
 
-
 //--Экпорт роутов Api
 module.exports = (app) => {
 
     app.get('/', (req, res) => {
-        res.send('./index.html');
+        res.send('common index nodejs');
     });
 
     /*
