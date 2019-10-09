@@ -9,12 +9,6 @@ const authMiddleware = require('../app/middleware/auth');
 //--Экпорт роутов Api
 module.exports = (app) => {
 
-    app.get('/common/', (req, res) => {
-
-        res.send('common index node js api');
-
-    });
-
     /*
         Поток прохождения запроса:
         ://запрос / проверка промежуточного слоя на авторизацию / выполнение запроса
@@ -23,10 +17,10 @@ module.exports = (app) => {
     */
 
     //products
-    app.get('/products', authMiddleware, products.getAll);
-    app.post('/products', authMiddleware, products.create);
-    app.put('/products/:id', authMiddleware, products.update);
-    app.delete('/products/:id', authMiddleware, products.remove);
+    app.get('/api/products', authMiddleware, products.getAll);
+    app.post('/api/products', authMiddleware, products.create);
+    app.put('/api/products/:id', authMiddleware, products.update);
+    app.delete('/api/products/:id', authMiddleware, products.remove);
 
 
     /*
@@ -35,6 +29,6 @@ module.exports = (app) => {
     */
 
     //auth
-    app.post('/signin', auth.signIn);
-    app.post('/refresh-tokens', auth.refreshTokens);
+    app.post('/api/signin', auth.signIn);
+    app.post('/api/refresh-tokens', auth.refreshTokens);
 };

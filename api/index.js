@@ -20,6 +20,23 @@ config.routes(app);
 //--конфигурация порт и путь до базы
 const { appPort, mongoUri } = config.app;
 
+
+app.get('/api/', (req, res) => {
+    // eslint-disable-next-line no-undef
+    res.sendFile(`${__dirname}/index.html`);
+});
+
+app.get('/api/ruz/', (req, res) => {
+    // eslint-disable-next-line no-undef
+    res.send(`<h1 style="text-align: center">Ruzeller</h1>`);
+});
+
+app.get('/api/ruz/:id', (req, res) => {
+    // eslint-disable-next-line no-undef
+    res.send(`<h1 style="text-align: center">Ruzeller ${req.params.id}</h1>`);
+});
+
+
 //--подключение к mongoDB и запуск сервера
 mongoose.connect(
     //--настройка mongoose
