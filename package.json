@@ -6,10 +6,7 @@
   "scripts": {
     "start": "babel-node api/index.js",
     "build": "babel api --out-dir public --source-maps inline",
-    "dev": "nodemon --exec babel-node api/index.js",
-    "now": "now --public --npm && now alias",
-    "rm": "now rm iutimetable-api -y",
-    "update": "npm run rm && npm run now"
+    "dev": "nodemon --exec babel-node api/index.js"
   },
   "author": "",
   "license": "ISC",
