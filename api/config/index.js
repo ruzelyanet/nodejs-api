@@ -1,9 +1,9 @@
-const app = require('./app');
-const express = require('./express');
-const routes = require('./routes');
+const app = require("./app");
+const express = require("./express");
+const routes = require("./routes");
 
 module.exports = {
-    app,
-    express,
-    routes
-}
+  app,
+  express,
+  routes
+};
